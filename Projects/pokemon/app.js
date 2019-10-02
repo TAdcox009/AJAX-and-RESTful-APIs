@@ -335,3 +335,19 @@ fetch(`https://pokeapi.co/api/v2/${_condition}/${_pocketmonster}`)
     selector.innerHTML = pokeIMG;
 }
     );
+
+    // ninetales
+var _condition = "pokemon"
+var _pocketmonster = "ninetales"
+
+fetch(`https://pokeapi.co/api/v2/${_condition}/${_pocketmonster}`)
+.then( res => res.json())
+.then(data => {
+    console.log(data.sprites)
+    const {...img} = data.sprites;
+    // console.log(img)
+    selector = document.querySelector('#ninetales');
+    pokeIMG = `<img src="${img.front_default}" id="ninetales">`;
+    selector.innerHTML = pokeIMG;
+}
+    );
